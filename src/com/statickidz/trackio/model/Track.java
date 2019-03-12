@@ -14,6 +14,7 @@ import javafx.scene.media.Media;
  */
 public class Track {
 
+    //类似我们数据库的结构
     private StringProperty fileName;
     private StringProperty path;
     private Media media;

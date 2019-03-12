@@ -56,6 +56,7 @@ public class PlayerController {
     //Tracks table
     @FXML
     private TableView<Track> trackTableView;
+    private TableView<Track> mainMenuView;
     private ObservableList<Track> observableTracksView;
     @FXML
     private TableColumn<Track, String> titleColumn;
@@ -131,6 +132,8 @@ public class PlayerController {
         // Initialize trackslists and tracks
         setupTrackListView();
         setupTrackTableView();
+
+        //mainMenuView.setVisible(false);
         
         // Handle maximize window on double click on toolbar
         mainToolBar.setOnMouseClicked((MouseEvent click) -> {
@@ -172,6 +175,7 @@ public class PlayerController {
      */
     @FXML
     private void handleNextTrack() {
+
         if(nextTrack != null) playTrack(nextTrack);
     }
     
@@ -181,6 +185,7 @@ public class PlayerController {
      */
     @FXML
     private void handlePrevTrack() {
+
         if(prevTrack != null) playTrack(prevTrack);
     }
 
@@ -207,6 +212,17 @@ public class PlayerController {
     private void handleClose() {
         Platform.exit();
         System.exit(0);
+    }
+
+    @FXML
+    private void handleChange(){
+        if(trackTableView.isVisible()){
+            trackTableView.setVisible(false);
+            mainMenuView.setVisible(true);
+        }else{
+            trackTableView.setVisible(true);
+            mainMenuView.setVisible(false);
+        }
     }
     
     /**
@@ -250,10 +266,9 @@ public class PlayerController {
     private void handleCredits() {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.initStyle(StageStyle.UTILITY);
-        alert.setTitle("Créditos");
+        alert.setTitle("产品信息");
         alert.setHeaderText(null);
-        alert.setContentText("Adrián Barrio Andrés\r\nhttps://statickidz.com/");
-
+        alert.setContentText("哇哈哈哈哈哈哈哈哈哈哈");
         alert.showAndWait();
     }
 

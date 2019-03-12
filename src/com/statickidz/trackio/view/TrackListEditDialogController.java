@@ -52,6 +52,7 @@ public class TrackListEditDialogController {
      * @param dialogStage
      */
     public void setDialogStage(Stage dialogStage) {
+
         this.dialogStage = dialogStage;
     }
 
@@ -74,6 +75,7 @@ public class TrackListEditDialogController {
      * @return
      */
     public boolean isOkClicked() {
+
         return okClicked;
     }
     
@@ -93,7 +95,7 @@ public class TrackListEditDialogController {
     private void handleSelectFolder() {
         if (isInputValid()) {
             DirectoryChooser chooser = new DirectoryChooser();
-            chooser.setTitle("Selecciona una carpeta con música");
+            chooser.setTitle("选择内含音乐的文件夹");
             File selectedDirectory = chooser.showDialog(dialogStage);
             trackList.setPath(new SimpleStringProperty(selectedDirectory.toString()));
             trackList.setName(new SimpleStringProperty(nameField.getText()));
@@ -118,13 +120,13 @@ public class TrackListEditDialogController {
     private boolean isInputValid() {
         String errorMessage = "";
         if (nameField.getText() == null || nameField.getText().length() == 0) {
-            errorMessage += "Introduce un nombre de lista de reproducción válido!\n";
+            errorMessage += "输入一个有效的播放列表名称!\n";
         }
         if (errorMessage.length() == 0) {
             return true;
         } else {
             Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Faltan datos");
+            alert.setTitle("缺少数据");
             alert.setHeaderText(null);
             alert.setContentText(errorMessage);
             alert.showAndWait();

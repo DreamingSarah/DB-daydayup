@@ -56,7 +56,7 @@
                         <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="489.0" styleClass="label-title" text="Selecciona" textAlignment="CENTER" AnchorPane.bottomAnchor="134.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
                         <Label fx:id="artistLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="516.0" mouseTransparent="true" styleClass="label-author" text="UNA LISTA" textAlignment="CENTER" AnchorPane.bottomAnchor="118.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
                         <ListView fx:id="trackListView" layoutY="79.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0" />
-                        <Label layoutY="64.0" onMouseClicked="#handleNewTrackList" styleClass="label-new-playlist" text="创建新列表" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                        <Label layoutX="4.0" layoutY="64.0" onMouseClicked="#handleNewTrackList" prefHeight="31.0" prefWidth="233.0" styleClass="label-new-playlist" text="创建新列表" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="64.0">
                             <graphic>
                                 <FontAwesomeIconView fill="#40edbd" glyphName="PLUS_CIRCLE" />
                             </graphic>
@@ -100,6 +100,15 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
                     <children>
+                  <TableView fx:id="mainMenuView" layoutY="37.0" prefHeight="617.0" prefWidth="796.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="技术验证：未来放置用户播放列表" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
                         <ToolBar fx:id="mainToolBar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="43.0" prefWidth="321.0" styleClass="background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <items>
                                 <Button mnemonicParsing="false" onAction="#handleClose" styleClass="button-toolbar">
@@ -138,6 +147,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                                 </Button>
+                        <Button fx:id="changeButton" mnemonicParsing="false" onAction="#handleChange" text="发现" />
                             </items>
                         </ToolBar>
                         <TableView fx:id="trackTableView" cacheHint="SPEED" layoutX="-12.5" layoutY="58.0" prefHeight="298.0" prefWidth="175.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
@@ -145,7 +155,7 @@
                                 <TableColumn fx:id="titleColumn" prefWidth="500.0" text="标题" />
                                 <TableColumn fx:id="authorColumn" prefWidth="239.0" text="作曲家" />
                         <TableColumn fx:id="albumColumn" prefWidth="200.0" text="唱片" />
-                        <TableColumn fx:id="yearColumn" prefWidth="200.0" text="AÑO" visible="false" />
+                        <TableColumn fx:id="yearColumn" prefWidth="200.0" text="年代" visible="false" />
                             </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

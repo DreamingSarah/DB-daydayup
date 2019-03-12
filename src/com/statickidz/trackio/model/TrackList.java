@@ -32,6 +32,7 @@ public class TrackList {
      * @param name
      * @param path
      */
+    //（MA）Tracklist的path往后我们可能会改成播放列表数据库的位置，其他不变
     public TrackList(Integer id, String name, String path) {
         this.id = new SimpleIntegerProperty(id);
         this.name = new SimpleStringProperty(name);

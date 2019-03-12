@@ -14,11 +14,11 @@
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
-<children><Label text="Nombre" /><TextField fx:id="nameField" GridPane.columnIndex="1" />
+<children><Label text="名称" /><TextField fx:id="nameField" GridPane.columnIndex="1" />
 </children>
 </GridPane>
 <HBox alignment="CENTER" layoutX="197.1875" layoutY="241.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-<children><Button defaultButton="true" layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleSelectFolder" prefHeight="33.0" prefWidth="177.0" text="Seleccionar carpeta" /><Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="110.0" text="Cancelar" />
+<children><Button defaultButton="true" layoutX="197.1875" layoutY="241.0" mnemonicParsing="false" onAction="#handleSelectFolder" prefHeight="33.0" prefWidth="177.0" text="选择文件夹" /><Button layoutX="249.375" layoutY="241.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="110.0" text="取消" />
             <Button fx:id="deleteTrackListButton" mnemonicParsing="false" onAction="#handleDeleteTrackList">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" />

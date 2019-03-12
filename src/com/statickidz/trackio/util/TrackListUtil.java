@@ -19,7 +19,8 @@ public class TrackListUtil {
     private static final String TRACKLIST_NUMBER = "TRACKLIST_NUMBER";
     private static final String TRACKLIST_NAME = "TRACKLIST_";
     private static final String TRACKLIST_PATH = "TRACKLIST_PATH_";
-    
+
+    //大家注意，这个项目目前是使用preference来保存个性化信息的
     private static final Preferences prefs = Preferences.userRoot().node(TRACKLIST_NODE);
 
     /**
